@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: student-management-backend
+    env: node
+    rootDir: backend
+    buildCommand: npm install && npm run build
+    startCommand: npm run start:prod
+    envVars:
+      - key: DB_HOST
+        value: # To be set in Render dashboard
+      - key: DB_PORT
+        value: 5432
+      - key: DB_USERNAME
+        value: # To be set in Render dashboard
+      - key: DB_PASSWORD
+        value: # To be set in Render dashboard
+      - key: DB_NAME
+        value: student_management
